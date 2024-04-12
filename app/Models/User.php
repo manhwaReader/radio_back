@@ -23,17 +23,9 @@ class User extends Authenticatable
         'fname',
         'lname',
         'email',
-        'profile_id',
         'password',
     ];
 
-    public function profile() {
-        return $this->belongsTo(Profile::class);
-    }
-
-    public function subs() {
-        return $this->hasMany(Subscription::class);
-    }
 
     /**
      * The attributes that should be hidden for serialization.

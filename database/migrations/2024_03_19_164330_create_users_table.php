@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('fname');
             $table->string('lname');
             $table->string('email')->unique();
-            $table->unsignedBigInteger('profile_id')->index();
-            $table->foreign('profile_id')->references('id')->on('profiles');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

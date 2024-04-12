@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('profiles', function (Blueprint $table) {
+        Schema::create('destinations', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('description');
+            $table->string('pictures');
+            $table->string('video');
+            $table->string('localisation');
             $table->timestamps();
             $table->softDeletes();
         });

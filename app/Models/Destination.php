@@ -6,13 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use User;
 
-class Profile extends Model
+class Destination extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title'];
-
-    public function users() {
-        return $this->hasMany(User::class);
-    }
+    protected $fillable = ['title', 'description', 'localisation', 'video', 'pictures'];
 }
